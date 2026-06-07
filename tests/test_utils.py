@@ -2,8 +2,6 @@
 
 import pytest
 from my_project.utils import calculate_sum, format_output, process_items, read_config, get_user_input
-import tempfile
-import os
 from unittest.mock import patch
 
 
