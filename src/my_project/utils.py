@@ -13,7 +13,7 @@ def format_output(data):
 
 def read_config(filepath):
     """Read configuration from a file."""
-    with open(filepath, "r") as f:
+    with open(filepath, "r", encoding="utf-8") as f:
         return f.read()
 
 

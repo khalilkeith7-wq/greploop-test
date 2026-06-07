@@ -11,8 +11,12 @@ def test_calculate_sum():
 
 def test_format_output():
     result = format_output([1, 2, 3])
-    assert "1" in result
-    assert "2" in result
+    assert result == "1\n2\n3\n"
+
+
+def test_format_output_empty():
+    result = format_output([])
+    assert result == ""
 
 
 def test_process_items():
