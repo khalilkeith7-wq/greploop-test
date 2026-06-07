@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "Example scaffold with a greet vertical slice"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+my-project = "my_project.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/my_project"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
