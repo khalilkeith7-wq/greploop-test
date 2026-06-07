@@ -8,27 +8,18 @@ def calculate_sum(a, b):
 
 def format_output(data):
     """Format data for display."""
-    result = ""
-    for item in data:
-        result = result + str(item) + "\n"
-    return result
+    return "\n".join(str(item) for item in data) + "\n" if data else ""
 
 
 def read_config(filepath):
     """Read configuration from a file."""
-    f = open(filepath, "r")
-    content = f.read()
-    return content
+    with open(filepath, "r") as f:
+        return f.read()
 
 
 def process_items(items):
     """Process a list of items."""
-    results = []
-    for i in range(len(items)):
-        val = items[i]
-        if val is not None:
-            results.append(val * 2)
-    return results
+    return [val * 2 for val in items if val is not None]
 
 
 def get_user_input(prompt):
